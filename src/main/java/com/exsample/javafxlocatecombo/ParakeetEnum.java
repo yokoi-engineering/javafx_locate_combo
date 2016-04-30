@@ -1,17 +1,17 @@
 package com.exsample.javafxlocatecombo;
 
 public enum ParakeetEnum {
-    PEACH_FACED_LOVEBIRD("小桜インコ"),
-    COCKATIEL("オカメインコ"),
-    BUDGERIGAR("セキセイインコ");
+    PEACH_FACED_LOVEBIRD("key.PeachFacedLovebird"),
+    COCKATIEL("key.Cockatiel"),
+    BUDGERIGAR("key.Budgerigar");
 
-    final private String name;
+    final private String resourceKey;
 
-    private ParakeetEnum(String name) {
-        this.name = name;
+    private ParakeetEnum(String resourceKey) {
+        this.resourceKey = resourceKey;
     }
 
-    public String getName() {
-        return name;
+    public String getResourceKey() {
+        return resourceKey;
     }
 }

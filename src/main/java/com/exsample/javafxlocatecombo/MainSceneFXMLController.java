@@ -1,6 +1,7 @@
 package com.exsample.javafxlocatecombo;
 
 import java.net.URL;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.ResourceBundle;
 import javafx.beans.value.ObservableValue;
@@ -29,7 +30,7 @@ public class MainSceneFXMLController implements Initializable {
             protected void updateItem(ParakeetEnum item, boolean empty) {
                 super.updateItem(item, empty);
                 if (item != null && !empty) {
-                    setText(item.getName());
+                    setText(rb.getString(item.getResourceKey()));
                 }
             }
         };
@@ -42,7 +43,7 @@ public class MainSceneFXMLController implements Initializable {
                 ObservableValue<? extends ParakeetEnum> observable,
                 ParakeetEnum oldValue, ParakeetEnum newValue) -> {
             if (Objects.nonNull(newValue)) {
-                label.setText(newValue.getName());
+                label.setText(rb.getString(newValue.getResourceKey()));
             }
         });
     }
